@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Tablecomp from "./Tablecomp";
 import Modal from "./Modal";
 import "../index.css";
+
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
   return (

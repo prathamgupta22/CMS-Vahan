@@ -31,16 +31,10 @@ const columns = [
   },
   {
     Header: "Edit",
-    accessor: "edit",
-    Cell: () => (
-      <button onClick={() => <EditDialog />} className="editButton">
-        <Pencil />
-      </button>
-    ),
+    Cell: ({ row }) => <EditButton rowData={row.original} />,
   },
   {
     Header: "Delete",
-    accessor: "delete",
     Cell: () => (
       <button className="deleteButton">
         <CircleX />
@@ -48,7 +42,32 @@ const columns = [
     ),
   },
 ];
+const EditButton = ({ rowData }) => {
+  const [showModal, setShowModal] = useState(false);
 
+  const handleClick = () => {
+    setShowModal(true);
+  };
+
+  const handleClose = () => {
+    setShowModal(false);
+  };
+
+  return (
+    <>
+      <button onClick={handleClick} className="editButton">
+        <Pencil />
+      </button>
+      {showModal && (
+        <EditDialog
+          rowData={rowData}
+          onClose={handleClose}
+          setShowModal={setShowModal}
+        />
+      )}
+    </>
+  );
+};
 const Tablecomp = () => {
   const {
     getTableProps,
