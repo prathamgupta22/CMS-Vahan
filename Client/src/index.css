@@ -1,68 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Nunito, "sans-serif";
+
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+* {
   margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.container {
+  overflow-x: auto;
+  /* height: 100vh; */
+}
+table {
+  width: 100rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.204);
+  border-radius: 10px;
+  border-collapse: collapse;
+  margin: auto;
+}
+th {
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  text-align: left;
+}
+th:first-of-type {
+  border-top-left-radius: 10px;
+}
+th:last-of-type {
+  border-top-right-radius: 10px;
+}
+tr:hover {
+  background-color: rgb(213, 213, 213);
+}
+td {
+  padding: 1.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  table {
+    width: 60vw;
+  }
+}
+
+.btn-container {
+  margin: auto;
+  width: 20rem;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.btn-container button {
+  border: none;
+  padding: 0.5rem 1rem;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
+.btn-container button:disabled {
+  cursor: not-allowed;
+  background-color: rgb(229, 229, 229);
+  color: rgba(0, 0, 0, 0.269);
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.add {
+  border: none;
+  width: 10%;
+  height: 10%;
+  padding: 0.5rem 1rem;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.centerr {
+  margin: 15px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.modal-container {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 20px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  background-color: black;
+  color: white;
+
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.editButton,
+.deleteButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  outline: none;
+}
+
+.deleteButton:hover {
+  background-color: #e32636;
+  border-radius: 50%;
+}
+.editButton:hover {
+  background-color: #f0f0f0;
+  border-radius: 60%;
+}
+
+.editButton .icon,
+.deleteButton .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-container {
+  margin-top: 20px;
+}
+
+.icon {
+  fill: #555;
+}
+
+.editButton {
+  margin-right: 5px;
+}
+
+.deleteButton {
+  margin-left: 5px;
 }

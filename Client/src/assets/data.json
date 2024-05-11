@@ -1,0 +1,164 @@
+{
+  "data": [
+    {
+      "name": "Rahul Kumar",
+      "email": "rahulkumar@example.com",
+      "mobileNumber": 1234567890,
+      "dateOfBirth": "1990-01-01",
+      "gender": "Male",
+      "salary": 50000
+    },
+    {
+      "name": "Priya Singh",
+      "email": "priyasingh@example.com",
+      "mobileNumber": 9876543210,
+      "dateOfBirth": "1985-05-15",
+      "gender": "Female",
+      "salary": 62000
+    },
+    {
+      "name": "Anita Sharma",
+      "email": "anitasharma@example.com",
+      "mobileNumber": 5555555555,
+      "dateOfBirth": "1988-11-20",
+      "gender": "Female",
+      "salary": 58000
+    },
+    {
+      "name": "Vijay Reddy",
+      "email": "vijayreddy@example.com",
+      "mobileNumber": 9998887776,
+      "dateOfBirth": "1975-09-30",
+      "gender": "Male",
+      "salary": 75000
+    },
+    {
+      "name": "Sunita Goyal",
+      "email": "sunitagoyal@example.com",
+      "mobileNumber": 3332221110,
+      "dateOfBirth": "1982-03-10",
+      "gender": "Female",
+      "salary": 64000
+    },
+    {
+      "name": "Mohit Patel",
+      "email": "mohitpatel@example.com",
+      "mobileNumber": 7777777777,
+      "dateOfBirth": "1978-07-20",
+      "gender": "Male",
+      "salary": 55000
+    },
+    {
+      "name": "Deepika Iyer",
+      "email": "deepikaiyer@example.com",
+      "mobileNumber": 4444444444,
+      "dateOfBirth": "1995-02-28",
+      "gender": "Female",
+      "salary": 48000
+    },
+    {
+      "name": "Amit Joshi",
+      "email": "amitjoshi@example.com",
+      "mobileNumber": 6666666666,
+      "dateOfBirth": "1980-12-05",
+      "gender": "Male",
+      "salary": 71000
+    },
+    {
+      "name": "Neha Chauhan",
+      "email": "nehachauhan@example.com",
+      "mobileNumber": 1112223334,
+      "dateOfBirth": "1992-06-12",
+      "gender": "Female",
+      "salary": 50000
+    },
+    {
+      "name": "Kunal Verma",
+      "email": "kunalverma@example.com",
+      "mobileNumber": 8889990001,
+      "dateOfBirth": "1987-04-18",
+      "gender": "Male",
+      "salary": 68000
+    },
+    {
+      "name": "Simran Kaur",
+      "email": "simrankaur@example.com",
+      "mobileNumber": 1231231231,
+      "dateOfBirth": "1993-07-11",
+      "gender": "Female",
+      "salary": 57000
+    },
+    {
+      "name": "Manish Singh",
+      "email": "manishsingh@example.com",
+      "mobileNumber": 9898989898,
+      "dateOfBirth": "1981-03-25",
+      "gender": "Male",
+      "salary": 65000
+    },
+    {
+      "name": "Aarav Gupta",
+      "email": "aaravgupta@example.com",
+      "mobileNumber": 7676767676,
+      "dateOfBirth": "1983-11-30",
+      "gender": "Male",
+      "salary": 52000
+    },
+    {
+      "name": "Pooja Agarwal",
+      "email": "poojaagarwal@example.com",
+      "mobileNumber": 4545454545,
+      "dateOfBirth": "1989-08-15",
+      "gender": "Female",
+      "salary": 56000
+    },
+    {
+      "name": "Rakesh Mehta",
+      "email": "rakeshmehta@example.com",
+      "mobileNumber": 9595959595,
+      "dateOfBirth": "1979-01-21",
+      "gender": "Male",
+      "salary": 77000
+    },
+    {
+      "name": "Shreya Ghoshal",
+      "email": "shreyaghoshal@example.com",
+      "mobileNumber": 1212121212,
+      "dateOfBirth": "1991-09-12",
+      "gender": "Female",
+      "salary": 63000
+    },
+    {
+      "name": "Aditya Roy",
+      "email": "adityaroy@example.com",
+      "mobileNumber": 3434343434,
+      "dateOfBirth": "1986-04-17",
+      "gender": "Male",
+      "salary": 69000
+    },
+    {
+      "name": "Tanvi Shah",
+      "email": "tanvishah@example.com",
+      "mobileNumber": 6565656565,
+      "dateOfBirth": "1994-12-30",
+      "gender": "Female",
+      "salary": 54000
+    },
+    {
+      "name": "Sohail Khan",
+      "email": "sohailkhan@example.com",
+      "mobileNumber": 7878787878,
+      "dateOfBirth": "1977-05-20",
+      "gender": "Male",
+      "salary": 73000
+    },
+    {
+      "name": "Isha Malhotra",
+      "email": "ishamalhotra@example.com",
+      "mobileNumber": 2323232323,
+      "dateOfBirth": "1992-10-10",
+      "gender": "Female",
+      "salary": 50000
+    }
+  ]
+}
