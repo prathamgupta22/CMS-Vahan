@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import { data } from "../assets/data.json"; // Ensure this import works in your setup
+import React, { useEffect, useState } from "react";
 import { useTable, useSortBy, usePagination } from "react-table";
 import { CircleX, Pencil } from "lucide-react";
 import EditDialog from "./EditDialog";
+// import { data } from "../assets/data.json";
+import axios from "axios";
 
 const columns = [
   {
@@ -15,20 +16,13 @@ const columns = [
   },
   {
     Header: "Mobile-No",
-    accessor: "mobileNumber",
+    accessor: "mobile_no",
   },
   {
     Header: "Date of Birth",
-    accessor: "dateOfBirth",
+    accessor: "dob",
   },
-  {
-    Header: "Gender",
-    accessor: "gender",
-  },
-  {
-    Header: "Salary",
-    accessor: "salary",
-  },
+
   {
     Header: "Edit",
     Cell: ({ row }) => <EditButton rowData={row.original} />,
@@ -69,6 +63,19 @@ const EditButton = ({ rowData }) => {
   );
 };
 const Tablecomp = () => {
+  const [tableData, setTableData] = useState([]);
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get("http://localhost:3000/api/v1/student");
+      setTableData(response.data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
   const {
     getTableProps,
     getTableBodyProps,
@@ -83,7 +90,7 @@ const Tablecomp = () => {
     pageCount,
     gotoPage,
   } = useTable(
-    { columns, data, initialState: { pageIndex: 0, pageSize: 7 } },
+    { columns, data: tableData, initialState: { pageIndex: 0, pageSize: 7 } },
     useSortBy,
     usePagination
   );
