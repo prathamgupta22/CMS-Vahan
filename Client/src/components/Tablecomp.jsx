@@ -29,11 +29,7 @@ const columns = [
   },
   {
     Header: "Delete",
-    Cell: () => (
-      <button className="deleteButton">
-        <CircleX />
-      </button>
-    ),
+    Cell: ({ row }) => <DeleteButton rowData={row.original} />,
   },
 ];
 const EditButton = ({ rowData }) => {
@@ -60,6 +56,21 @@ const EditButton = ({ rowData }) => {
         />
       )}
     </>
+  );
+};
+const DeleteButton = ({ rowData, fetchData }) => {
+  const handleDelete = async () => {
+    try {
+      await axios.delete(`/api/v1/student/${rowData.id}`);
+      fetchData();
+    } catch (error) {
+      console.log("Error deleting data", error);
+    }
+  };
+  return (
+    <button onClick={handleDelete} className="deleteButton">
+      <CircleX />
+    </button>
   );
 };
 const Tablecomp = () => {
