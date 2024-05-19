@@ -4,14 +4,11 @@ import cors from "cors";
 
 dotenv.config();
 
-// app.use(
-//   cors({
-//     origin: "*",
-//     methods: ["GET", "POST"],
-//     // allowedHeaders: ["Content-Type", "Authorization", "Custom-Header"],
-//   })
-// );
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 const port = process.env.PORT || 8000;
 

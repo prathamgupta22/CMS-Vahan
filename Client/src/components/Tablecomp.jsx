@@ -70,7 +70,7 @@ const Tablecomp = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/v1/student");
+      const response = await axios.get("/api/v1/student");
       setTableData(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -90,7 +90,7 @@ const Tablecomp = () => {
     pageCount,
     gotoPage,
   } = useTable(
-    { columns, data: tableData, initialState: { pageIndex: 0, pageSize: 7 } },
+    { columns, data: tableData, initialState: { pageIndex: 0, pageSize: 5 } },
     useSortBy,
     usePagination
   );

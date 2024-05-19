@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Home from "./components/Home";
+import axios from "axios";
 
 const App = () => {
   return (

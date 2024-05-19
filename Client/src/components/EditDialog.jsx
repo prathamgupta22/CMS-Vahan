@@ -1,5 +1,6 @@
 import React from "react";
 import { X } from "lucide-react";
+import axios from "axios";
 
 const EditDialog = ({ setShowModal }) => {
   return (
